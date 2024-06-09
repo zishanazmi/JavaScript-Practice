@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name and Email Validation</title>
+</head>
+<body>
+<form name="myform">
+	Name <input type="text" name="uname"><br>
+	Email <input type="text" name="email" style="margin-top: 10px"><br>
+	<input type="button" value="validate" onclick="fun()" name="btn" style="margin-top: 10px">
+</form>
+<script type="text/javascript">
+	function fun(){
+		with(document.forms.myform){
+			if (uname.value.length == 0) {
+				alert("Please Enter Your Name");
+			}
+			else if (uname.value.length < 2) {
+				alert("Please Enter a valid name");
+			}
+
+			else if (email.value.length == 0) {
+				alert("Please Enter your email");
+			}
+			else if (email.value.length < 5) {
+				alert("Enter a valid email");
+			}
+			else{
+				alert("Registration Completed")
+			}
+
+		}
+	}
+</script>
+</body>
+</html>

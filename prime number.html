@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Number</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a = prompt("Enter a number");
+	var b = parseInt(a);
+	if(b < 1){
+		alert("Please enter a positive natural number \nRefresh for retrying");
+		location.reload();
+	}
+	else{
+		for(var i = 2; i<b; i++){
+			if(b%i == 0){
+				alert("The entered number is not a prime number");
+				location.reload();
+				break;
+			}else{
+				alert("The entered number is a prime number");
+				location.reload();
+				break;
+			}
+		}
+	}
+</script>
+</body>
+</html>

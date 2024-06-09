@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slideshow</title>
+</head>
+<body>
+	<img src="D:/My Data/Atharva/Desktop/images/n.jpg" name="SlideID" width="200" height="200" /> <br> <br>
+	<input type="button" value="Back" onclick="DisplaySlides(-1)">
+	<input type="button" value="Forward" onclick="DisplaySlides(1)">
+
+	<script type="text/javascript">
+		MySlides = new Array('resources/Nitro Wallpaper 1.jpg', 'resources/Nitro Wallpaper 2.jpg', 'resources/Nitro Wallpaper.jpg');
+		i = 0;
+		function DisplaySlides(SlideNumber) {
+			i = i + SlideNumber;
+			if (i > MySlides.length - 1) {
+				i = 0;
+			}
+			if (i < 0) {
+				i = MySlides.length - 1;
+			}
+			document.SlideID.src = MySlides[i];
+		}
+	</script>
+</body>
+</html>

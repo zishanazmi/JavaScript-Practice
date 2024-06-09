@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opening a Window</title>
+</head>
+<body>
+	<input type="button" value="Open Window" onclick="openNewWindow()">
+<script type="text/javascript">
+	function openNewWindow(){
+		// Open a new window with specified dimensions
+		let newWindow = window.open("", "newWindow", "height=200,width=400");
+
+		// Check if the window was successfully opened
+		if (newWindow) {
+			// Add a welcome message to the new window
+			newWindow.document.write("<h1>Welcome!</h1>");
+			newWindow.document.write("<p>Thank you for visiting our site. This is a new window with a welcome message.</p>");
+			newWindow.document.write("<button onclick='window.close()'>Close Window</button>");
+		} else {
+			alert("Popup blocked. Please allow popups for this site.");
+		}
+	}
+</script>
+</body>
+</html>

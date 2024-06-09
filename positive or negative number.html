@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Positive and Negative Number</title>
+</head>
+<body>
+	<input type="text" id="thenumber" name="txt">
+	<input type="button" value="submit" name="btn" onclick="fun()">
+<script type="text/javascript">
+	function fun(){
+	var b = document.getElementById('thenumber').value;
+	var a = parseInt(b);
+	if(a>0){
+		alert("Number is Positive");
+	}else if (a == 0){
+		alert("Please enter a number rather than 0")
+	}else{
+		alert("Number is Negative")
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disabling the elements</title>
+</head>
+<body>
+	<form name="myform">
+		<input type="text" name="name">
+		<input type="button" value="disable" name="btn" onclick="fun()">
+		<input type="button" value="enable" name="btn" onclick="fun1()">
+	</form>
+<script type="text/javascript">
+	function fun(){
+	document.forms.myform.name.readOnly = true;
+	}
+	function fun1(){
+	document.forms.myform.name.readOnly = false;
+	}
+</script>
+</body>
+</html>

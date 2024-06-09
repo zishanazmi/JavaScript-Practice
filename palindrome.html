@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome</title>
+</head>
+<body>
+<form name="myform">
+	<input type="text" name="str">
+	<input type="button" value="Check" name="btn" onclick="fun()">
+</form>
+<script type="text/javascript">
+	//window.onblur = () => alert( "blur" );
+	function fun(){
+			with(document.forms.myform){
+				var a = str.value;
+				var arr = a.split('');
+				var motu = arr.reverse();
+			    var joined = motu.join('');
+			    if(a == joined){
+			    	alert("Entered value is a palindrome");
+			    }else{
+			    	alert("Entered String is not a palindrome");
+			    }
+			}
+	}
+</script>
+</body>
+</html>
