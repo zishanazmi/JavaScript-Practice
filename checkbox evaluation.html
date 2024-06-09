@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkbox Evaluation</title>
+</head>
+<body>
+<form name="myform">
+	<input type="Checkbox" name="cb" id="neha">colors
+	<input type="Checkbox" name="cb" id="bubu">fruits
+	<input type="Checkbox" name="cb" id="motu">cars
+	<input type="button" value="submit" name="btn" onclick="fun()">
+</form>
+<script type="text/javascript">
+	var neha = docuemnt.getElementById('colors');
+	var bubu = docuemnt.getElementById('fruits');
+	var motu = docuemnt.getElementById('cars');
+	function fun(){
+		with(document.forms.myform){
+			if (neha.checked == true) {
+				alert("I Love colors");
+			}
+			if (bubu.checked == true) {
+				alert("I Love fruits");
+			}
+			if (motu.checked == true) {
+				alert("I Love cars");
+			}
+		}
+	}
+</script>
+</body>
+</html>

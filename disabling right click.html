@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RIght Click Disabled</title>
+</head>
+<body>
+	<p>Right Click is Disabled</p>
+<script type="text/javascript">
+	document.oncontextmenu = new Function("fun()");
+	function fun(){
+		alert("Right Click Disabled");
+		document.addEventListener('contextmenu', event => event.preventDefault());
+	}
+</script>
+</body>
+</html>

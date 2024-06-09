@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation using Regular Expression</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="uname" id="uname" placeholder="Name">
+		<input type="text" id="txt" name="mail" placeholder="Email">
+		<input type="text" name="mail" id="num" placeholder="Mobile Number">
+		<input type="button" name="btn" value="Submit" onclick="fun()" />
+	</form>
+	<script type="text/javascript">
+		function fun(){
+
+			//getting elements
+			var uname = document.getElementById('uname').value;
+			var mail = document.getElementById('txt').value;
+			var num = document.getElementById('num').value;
+			
+			//setting regular expressions
+			var unamereg = /^[a-zA-Z]+$/;
+			var mailreg = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+			var mobreg = /^[0-9]+$/;
+
+			//validating elements
+			if(!uname.match(unamereg) || uname.length < 2){
+				alert("Enter a valid name")
+			}
+			else if(!mail.match(mailreg)){
+				alert("Invalid Email Id");
+			}
+			else if(!num.match(mobreg) || num.length < 10 || num.length > 10){
+				alert("Invalid Mobile Number");
+			}
+			else{
+				alert("Registration Sucessfull");
+			}
+		}
+	</script>
+</body>
+</html>

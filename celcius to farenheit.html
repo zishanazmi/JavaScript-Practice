@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Celcius to Farhenhiet</title>
+</head>
+<body>
+	<form name="myform">
+		<input type="text" id="celc" name="celcius">
+		<input type="button" value="submit" name="btn" onclick="fun()">
+	</form>
+<script type="text/javascript">
+	function fun(){
+		// with(document.fomrs.myform){
+
+			var z = document.getElementById('celc').value;
+			var a = parseInt(z);
+			var b = a*1.8;
+			var c = b+32;
+			alert(c);
+
+		}
+	// }
+</script>
+</body>
+</html>

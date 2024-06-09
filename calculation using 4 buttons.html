@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculation using 4 buttons</title>
+</head>
+<body>
+<form name="myform">
+<input type="text" name="number1">
+<input type="text" name="number2">
+<input type="button" value="add" name="btn" onclick="fun1()">
+<input type="button" value="subtract" name="btn1" onclick="fun2()">
+<input type="button" value="multiply" name="btn2" onclick="fun3()">
+<input type="button" value="divide" name="btn3" onclick="fun4()">
+</form>
+<script type="text/javascript">
+
+	function fun1(){
+		with(document.forms.myform){
+			var a = parseInt(number1.value);
+			var b = parseInt(number2.value);
+			var c = a + b;
+			alert(c);
+		}
+	}
+	function fun2(){
+		with(document.forms.myform){
+			var a = parseInt(number1.value);
+			var b = parseInt(number2.value);
+			var c = a - b;
+			alert(c);
+		}
+	}
+	function fun3(){
+		with(document.forms.myform){
+			var a = parseInt(number1.value);
+			var b = parseInt(number2.value);
+			var c = a * b;
+			alert(c);
+		}
+	}
+	function fun4(){
+		with(document.forms.myform){
+			var a = parseInt(number1.value);
+			var b = parseInt(number2.value);
+			var c = a / b;
+			alert(c);
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chain Menu</title>
+</head>
+<body>
+	<form name="myform">
+		<select onchange="fun()" name="select">
+			<option value="1">Boy</option>
+			<option value="2">Girl</option>
+		</select>
+		<select name="names">
+			<option>zishan</option>
+			<option>imran</option>
+			<option>avdhut</option>
+			<option>kaushtubh</option>
+			<option>gaurav</option>
+			<option>nikhil</option>
+		</select>
+	</form>
+<script type="text/javascript">
+	function fun(){
+		with(document.forms.myform){
+			if(select.value == 1){
+				names[0].text = "zishan";
+				names[1].text = "imran";
+				names[2].text = "avdhut";
+				names[3].text = "kaushtubh";
+				names[4].text = "gaurav";
+				names[5].text = "nikhil";
+			}
+			else if(select.value == 2){
+				names[0].text = "smita";
+				names[1].text = "aishwarya";
+				names[2].text = "rutuja";
+				names[3].text = "shradha";
+				names[4].text = "pooja";
+				names[5].text = "payal";
+			}
+		}
+	}
+</script>
+</body>
+</html>

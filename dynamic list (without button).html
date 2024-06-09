@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic List (No Button)</title>
+</head>
+<body>
+<form name="myform">
+	<input type="radio" name="rad" onchange="fun1()">Fruits
+	<input type="radio" name="rad" onchange="fun2()">Vegies
+	<select name="select">
+		<option></option>
+		<option></option>
+		<option></option>
+	</select>
+</form>
+<script type="text/javascript">
+	function fun1(){
+		with(document.forms.myform){
+				select[0].text = "Apple"
+				select[1].text = "Mango"
+				select[2].text = "Papaya"	
+		}
+}
+			function fun2(){
+		with(document.forms.myform){
+				select[0].text = "Tamato"
+				select[1].text = "Potato"
+				select[2].text = "Ginger"
+			}
+	}
+</script>
+</body>
+</html>
