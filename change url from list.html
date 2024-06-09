@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>try</title>
+</head>
+<body>
+<form name="redirect">
+<select name="selection" onchange="WinOpen()">
+  <option>Select Page</option>
+  <option value="http://www.google.com">Google</option>
+  <option value="http://www.msbte.org.in">MSBTE</option>
+  <option value="http://www.yahoo.com">Yahoo</option>
+</select>
+<script type="text/javascript">
+
+function WinOpen() {
+  var url=document.redirect.selection.value
+  document.location.href=url
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xss</title>
+</head>
+<body>
+	<form name="myform">
+		<input type="text" name="name">
+		<input type="button" value="submit" name="btn" onclick="fun()">
+	</form>
+	<p id="hello">hello</p>
+<script type="text/javascript">
+	var a = document.getElementById('hello');
+	function fun(){
+		with(document.forms.myform){
+			var b = name.value;
+			a.innerHTML= b;
+		}
+	}
+</script>
+</body>
+</html>
